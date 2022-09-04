@@ -1,10 +1,18 @@
-function tasu(a,b)
-    println("tasu in original.jl")
-    return a+b
-end
+# function tasu(a,b)
+#     println("tasu in original.jl")
+#     return a+b
+# end
+# function supercoolfunction(a,b)
+#     return tasu(a,b)/b
+# end
+# println(supercoolfunction(4,10),"in original.jl")
 
-function supercoolfunction(a,b)
-    return tasu(a,b)/b
+module Original
+    function tasu(a,b)
+        println("tasu in original.jl")
+        return a+b
+    end
+    function supercoolfunction(a,b)
+        return tasu(a,b)/b
+    end
 end
-
-println(supercoolfunction(4,10),"in original.jl")
